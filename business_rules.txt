@@ -1,0 +1,17 @@
+Support Ticket Validation Business Rules
+
+1. Input Type Requirement:
+   - Input must strictly be a string data type.
+   - Any non-string types (such as numbers, lists, dictionaries, booleans, or None) must raise a ValueError.
+
+2. Whitespace Trimming:
+   - All leading and trailing whitespace must be removed from the input string using Python's strip() method.
+
+3. Character Length Boundaries:
+   - String length is measured after whitespace trimming using Python's len() function.
+   - Valid text must contain between 1 and 1,000 characters inclusive (1 <= len(trimmed) <= 1000).
+   - Empty strings or strings consisting solely of whitespace characters must raise a ValueError.
+   - Strings that exceed 1,000 characters after trimming must raise a ValueError.
+
+4. Output Return Value:
+   - When input meets all valid criteria, the function returns the clean, trimmed text string.
