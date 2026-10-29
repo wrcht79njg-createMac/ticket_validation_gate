@@ -12,7 +12,7 @@ def validate_ticket(text):
     if len(trimmed) == 0:
         raise ValueError("Ticket text cannot be empty or whitespace only.")
 
-    if len(trimmed) > 1000:
+    if len(trimmed) >= 1000:
         raise ValueError("Ticket text cannot exceed 1000 characters.")
 
     return trimmed
